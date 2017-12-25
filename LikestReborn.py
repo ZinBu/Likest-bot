@@ -9,6 +9,7 @@ from time import sleep
 import requests
 import vk  # external lib
 from vkapi import VK
+from keys import APP_ID
 
 
 class WorkerVK:
@@ -21,7 +22,7 @@ class WorkerVK:
         """ Читает токен из файла, иначе - создает по учетным данным. Вовзращает токен """
 
         scope = "friends,photos,audio,video,docs,notes,pages,status,wall,groups,messages,notifications,offline"
-        app_id = 5377227
+        app_id = APP_ID
 
         try:
             with open("Token", "r") as memory:
